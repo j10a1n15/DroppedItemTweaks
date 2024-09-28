@@ -1,18 +1,23 @@
+<a href="https://ko-fi.com/microcontrollers" target="_blank">
+  <img alt="kofi-singular-alt" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular-alt_vector.svg">
+</a>
+
+<a href="https://codeberg.org/MicrocontrollersDev/DroppedItemTweaks" target="_blank">
+  <img alt="codeberg" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/codeberg_vector.svg">
+</a>
+
+<a href="https://modrinth.com/mod/droppeditemtweaks" target="_blank" rel="nofollow">
+  <img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
+</a>
+
 # Dropped Item Tweaks
 
-Small changes to the way dropped items render.
-
-## Download
-
-Downloads can be found on the [Modrinth page](https://modrinth.com/mod/droppeditemtweaks).
+Allows customizing the look of dropped items. Purely visual!
 
 ## Features
 
 - Static Dropped Items
+  - Removes the bobbing up/down effect, making dropped items only rotate in place.
 - Dropped Stack Item Count
-- Item Scale
-- UHC Overlay
-
-## Modpack?
-
-If you want to use my mods in a Modpack, I ask that the modpack is only available on Modrinth. Feel free to reach out to me if you would like to discuss further.
+  - Allows customizing the amount of dropped items of a stack shown. Vanilla only shows up to 5 at a time depending on the amount of items, while this can allow you to go up to 64.
+  - Unlike vanilla, this will show the exact number of items specified, while vanilla scales the amount of items shown depending on how many items are in the stack. This can still be disabled in config.
