@@ -2,12 +2,12 @@
   <img alt="kofi-singular-alt" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular-alt_vector.svg">
 </a>
 
-<a href="https://codeberg.org/MicrocontrollersDev/DroppedItemTweaks" target="_blank">
-  <img alt="codeberg" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/codeberg_vector.svg">
-</a>
-
 <a href="https://modrinth.com/mod/droppeditemtweaks" target="_blank" rel="nofollow">
   <img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">
+</a>
+
+<a href="https://www.curseforge.com/minecraft/mc-mods/dropped-item-tweaks" target="_blank">
+  <img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg">
 </a>
 
 # Dropped Item Tweaks
