@@ -1,5 +1,5 @@
 plugins {
-	id("dev.architectury.loom") version "1.7.+"
+	id("dev.architectury.loom") version "1.10.+"
 }
 
 class ModData {
@@ -63,18 +63,13 @@ repositories {
 	maven("https://maven.isxander.dev/releases") // YACL
 	maven("https://thedarkcolour.github.io/KotlinForForge") // Kotlin for Forge - required by YACL
 	maven("https://maven.terraformersmc.com") // Mod Menu
+	maven("https://maven.nucleoid.xyz/") { name = "Nucleoid" } // Placeholder API - required by Mod Menu
 	maven("https://maven.neoforged.net/releases") // NeoForge
 	maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1") // DevAuth
 }
 
 dependencies {
 	minecraft("com.mojang:minecraft:${mc.version}")
-
-	val yaclMcVersion = when (mc.version) {
-		"1.21.1" -> "1.21"
-		"1.21.3" -> "1.21.2"
-		else -> mc.version
-	}
 
 	@Suppress("UnstableApiUsage")
 	mappings(loom.layered {
@@ -91,20 +86,20 @@ dependencies {
 
 	if (loader.isFabric) {
 		modImplementation("net.fabricmc:fabric-loader:${property("deps.fabric_loader")}")
-		modImplementation("dev.isxander:yet-another-config-lib:${deps.yaclVersion}+${yaclMcVersion}-${loader.loader}")
+		modImplementation("net.fabricmc.fabric-api:fabric-api:${deps.fabricApiVersion}+${mc.version}")
+		modImplementation("dev.isxander:yet-another-config-lib:${deps.yaclVersion}+${mc.version}-${loader.loader}")
 		modImplementation("com.terraformersmc:modmenu:${deps.modmenuVersion}")
-		if (deps.fabricApiVersion != "[VERSIONED]") modImplementation("net.fabricmc.fabric-api:fabric-api:${deps.fabricApiVersion}")
 	} else if (loader.isNeoforge) {
 		"neoForge"("net.neoforged:neoforge:${findProperty("deps.neoforge")}")
-		implementation("dev.isxander:yet-another-config-lib:${deps.yaclVersion}+${yaclMcVersion}-${loader.loader}") {isTransitive = false}
+		implementation("dev.isxander:yet-another-config-lib:${deps.yaclVersion}+${mc.version}-${loader.loader}") { isTransitive = false }
 	}
 }
 
 java {
-	val java = if (stonecutter.eval(
+	val java = if (stonecutter.compare(
 			stonecutter.current.version,
-			">=1.20.6"
-		)
+			"1.20.6"
+		) >= 0
 	) JavaVersion.VERSION_21 else JavaVersion.VERSION_17
 	sourceCompatibility = java
 	targetCompatibility = java

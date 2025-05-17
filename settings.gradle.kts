@@ -11,7 +11,7 @@ pluginManagement {
 }
 
 plugins {
-	id("dev.kikugie.stonecutter") version "0.5"
+	id("dev.kikugie.stonecutter") version "0.5.2"
 }
 
 stonecutter {
@@ -25,13 +25,12 @@ stonecutter {
 			}
 		}
 
-		mc("1.20.4", listOf("fabric"))
-		mc("1.20.6", listOf("fabric"))
-		mc("1.21.1", listOf("neoforge"))
+		mc("1.21.1", listOf("fabric", "neoforge"))
 		mc("1.21.3", listOf("fabric", "neoforge"))
 		mc("1.21.4", listOf("fabric", "neoforge"))
+		mc("1.21.5", listOf("fabric", "neoforge"))
 
-		vcsVersion = "1.21.4-fabric"
+		vcsVersion = "1.21.5-fabric"
 	}
 }
 
