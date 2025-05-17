@@ -34,4 +34,4 @@ stonecutter {
 	}
 }
 
-rootProject.name = "Sciophobia"
+rootProject.name = "Dropped Item Tweaks"
